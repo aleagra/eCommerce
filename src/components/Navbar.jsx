@@ -2,8 +2,8 @@ import { CartIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
 
 function Navbar() {
   return (
-    <nav className="w-full items-center flex justify-between px-12 my-8">
-      <ul className="flex gap-12 text-[#9c9c9c] text-2xl">
+    <nav className="w-full items-center flex justify-between px-12 py-5 border-b-2 border-[#e5e5e5]">
+      <ul className="flex gap-12 text-[#9c9c9c] text-xl">
         <li>Home</li>
         <li>Sale</li>
         <li>Man</li>
