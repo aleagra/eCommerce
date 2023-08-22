@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import Cards from "./Cards";
 import { BRAND_FILTERS, items } from "./const";
 // Ajusta la importación según la ubicación de tus datos
 
@@ -9,13 +10,16 @@ const ContainerCards = ({ activeBrandFilter }) => {
       : items.filter((item) => item.brand === activeBrandFilter);
 
   return (
-    <div className="gap-4 grid grid-cols-4">
+    <div className="gap-12 grid grid-cols-4">
       {filteredItems.map((item) => (
-        <div key={item.id} className="card">
-          <img src={`./${item.img}`} alt={item.title} />
-          <h3>{item.title}</h3>
-          <p>${item.price}</p>
-        </div>
+        <Cards
+          key={item}
+          id={item.id}
+          title={item.title}
+          price={item.price}
+          img={item.img}
+          description={item.description}
+        />
       ))}
     </div>
   );
