@@ -1,9 +1,7 @@
+import Navbar from "./components/Navbar";
+
 function App() {
-  return (
-    <div>
-      <h1 className="bg-red-600">hola</h1>
-    </div>
-  );
+  return <Navbar />;
 }
 
 export default App;
