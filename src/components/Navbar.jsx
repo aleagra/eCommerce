@@ -3,7 +3,7 @@ import { CartIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
 function Navbar() {
   return (
     <nav className="w-full items-center flex justify-between px-12 my-8">
-      <ul className="flex gap-12 text-[#9c9c9c] text-xl">
+      <ul className="flex gap-12 text-[#9c9c9c] text-2xl">
         <li>Home</li>
         <li>Sale</li>
         <li>Man</li>
