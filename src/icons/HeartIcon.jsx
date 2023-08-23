@@ -1,12 +1,21 @@
-function HeartIcon() {
+import { useState } from "react";
+
+function HeartIcon({ className }) {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
+      fill={isClicked ? "red" : "none"}
+      stroke={isClicked ? "red" : "#c5c5c5"}
       strokeWidth={1.5}
-      stroke="#c5c5c5"
-      className="w-6 h-6"
+      viewBox="0 0 24 24"
+      className={className}
+      onClick={handleClick}
     >
       <path
         strokeLinecap="round"

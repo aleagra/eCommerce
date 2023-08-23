@@ -15,13 +15,13 @@ function Navbar() {
           <input
             type="text"
             placeholder="Enter your search shoes..."
-            className="outline-none bg-[#f5f5f5] text-[#c5c5c5] rounded-lg py-3 pl-12 pr-14 text-sm"
+            className="outline-none bg-[#f5f5f5] text-[#c5c5c5] shadow-sm rounded-lg py-3 pl-12 pr-14 text-sm"
           />
           <SearchIcon />
         </div>
-        <HeartIcon />
+        <HeartIcon className={"w-6 h-6"} />
         <div className="flex relative">
-          <CartIcon />
+          <CartIcon className={"w-6 h-6 stroke-[#c5c5c5]"} />
           <span className="p-[3px] absolute right-0 top-1 h-fit rounded-full bg-[#ea3839]"></span>
         </div>
         <UserIcon />
