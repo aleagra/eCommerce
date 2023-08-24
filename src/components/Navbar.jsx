@@ -1,10 +1,14 @@
 import { CartIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
-
+import { NavLink } from "react-router-dom";
+import { useCart } from "react-use-cart";
 function Navbar() {
+  var { totalItems } = useCart();
   return (
     <nav className="w-full items-center flex justify-between px-12 py-5 border-b-2 border-[#e5e5e5]">
       <ul className="flex gap-12 text-[#9c9c9c] text-xl">
-        <li>Home</li>
+        <NavLink to={"/"} activeclassname={"active"}>
+          Home
+        </NavLink>
         <li>Sale</li>
         <li>Man</li>
         <li>Woman</li>
@@ -19,12 +23,28 @@ function Navbar() {
           />
           <SearchIcon />
         </div>
-        <HeartIcon className={"w-6 h-6"} />
-        <div className="flex relative">
-          <CartIcon className={"w-6 h-6 stroke-[#c5c5c5]"} />
-          <span className="p-[3px] absolute right-0 top-1 h-fit rounded-full bg-[#ea3839]"></span>
-        </div>
-        <UserIcon />
+        <NavLink>
+          <HeartIcon className={"w-6 h-6"} />
+        </NavLink>
+        <NavLink to={"/cart"} activeclassname={"active"}>
+          <div className="flex relative">
+            <CartIcon className={"w-6 h-6 stroke-[#c5c5c5]"} />
+            <span
+              className={`px-[3px] absolute right-0 top-0 h-fit rounded-full ${
+                totalItems > 0 ? "bg-[#ea3839] text-white text-xs" : "hidden"
+              }`}
+            >
+              {totalItems}
+            </span>
+          </div>
+        </NavLink>
+        <NavLink
+          activeclassname={"active"}
+          className={"stroke-[#c5c5c5]"}
+          to={"/login"}
+        >
+          <UserIcon />
+        </NavLink>
       </div>
     </nav>
   );

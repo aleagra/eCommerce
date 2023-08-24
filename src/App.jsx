@@ -1,16 +1,21 @@
-import Home from "./components/Home";
+import { CartProvider } from "react-use-cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import { Cart, Home, Login } from "./pages";
+import { Navbar } from "./components";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/Cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

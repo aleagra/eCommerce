@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { BRAND_FILTERS } from "./const";
 
 const FilterButtons = ({ activeFilter, onChangeFilter }) => {
@@ -13,7 +11,7 @@ const FilterButtons = ({ activeFilter, onChangeFilter }) => {
               onClick={() => onChangeFilter(filter)}
               className={`py-2 px-6 rounded-md border border-[#e5e5e5] ${
                 activeFilter === filter
-                  ? "active bg-[#3b6eec] text-white transition-colors duration-700"
+                  ? " bg-[#3b6eec] text-white transition-colors duration-700"
                   : ""
               }`}
             >
@@ -26,7 +24,7 @@ const FilterButtons = ({ activeFilter, onChangeFilter }) => {
             onClick={() => onChangeFilter("popular")}
             className={`py-2 px-6 rounded-md border border-[#e5e5e5] ${
               activeFilter === "popular"
-                ? "active bg-[#3b6eec] text-white transition-colors duration-700"
+                ? " bg-[#3b6eec] text-white transition-colors duration-700"
                 : ""
             }`}
           >

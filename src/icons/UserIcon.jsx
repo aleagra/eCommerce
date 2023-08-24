@@ -5,7 +5,6 @@ function UserIcon() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="#c5c5c5"
       className="w-7 h-7"
     >
       <path
