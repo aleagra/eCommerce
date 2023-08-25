@@ -1,4 +1,5 @@
 import { useCart } from "react-use-cart";
+import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
 function Cart() {
   const {
     items,
@@ -10,77 +11,57 @@ function Cart() {
 
   const cart = () => (
     <>
-      <div className="">
-        <h5 className="">
-          {!totalUniqueItems} ITEMS TOTALES: ({totalItems})
-        </h5>
+      <div className="my-4 text-center">
+        <span className="text-2xl font-bold">
+          {!totalUniqueItems} MI COMPRA ({totalItems})
+        </span>
       </div>
-      <section className="">
-        {items.map((Element) => {
+      <section className="flex flex-col gap-10">
+        {items.map((item) => {
           return (
             <>
-              <section className="">
-                <div className="">
-                  <img src={Element.img} alt="" />
+              <section
+                className="flex bg-[#f6f6f6] gap-10 items-center"
+                key={item.id}
+              >
+                <div className="w-[200px]">
+                  <img src={item.img} alt="" className="" />
                 </div>
 
-                <div className="">
-                  <p className="">{Element.title}</p>
-
-                  <p className="">PRECIO: {Element.price}</p>
-
-                  <p className="">CANTIDAD: {Element.quantity}</p>
-                </div>
-
-                <div className="">
+                <div className="flex flex-col justify-center gap-3 px-10 relative">
                   <button
-                    onClick={() =>
-                      updateItemQuantity(Element.id, Element.quantity + 1)
-                    }
-                    className="shop-button"
+                    className="absolute right-0"
+                    onClick={() => removeItem(item.id)}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="white"
+                    <CloseIcon />
+                  </button>
+                  <p className="text-xl font-bold">{item.title}</p>
+                  <p className="text-xl ">{item.description}</p>
+
+                  <div className="flex gap-5">
+                    <button
+                      className=""
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity - 1)
+                      }
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19.5 12h-15"
-                      />
-                    </svg>
-                  </button>
+                      <MinusIcon />
+                    </button>
+                    <span>{item.quantity}</span>
 
-                  <button
-                    className="shop-button"
-                    onClick={() =>
-                      updateItemQuantity(Element.id, Element.quantity - 1)
-                    }
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="white"
+                    <button
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity + 1)
+                      }
+                      className="shop-button"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m7.5-7.5h-15"
-                      />
-                    </svg>
-                  </button>
+                      <PlusIcon />
+                    </button>
 
-                  <button
-                    className="shop-button"
-                    onClick={() => removeItem(Element.id)}
-                  >
-                    Eliminar
-                  </button>
+                    <span className="font-bold">
+                      ${item.price * item.quantity}
+                    </span>
+                  </div>
                 </div>
               </section>
             </>

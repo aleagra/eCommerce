@@ -2,7 +2,7 @@ import { CartIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
 import { NavLink } from "react-router-dom";
 import { useCart } from "react-use-cart";
 function Navbar() {
-  var { totalItems } = useCart();
+  var { totalUniqueItems } = useCart();
   return (
     <nav className="w-full items-center flex justify-between px-12 py-5 border-b-2 border-[#e5e5e5]">
       <ul className="flex gap-12 text-[#9c9c9c] text-xl">
@@ -31,10 +31,12 @@ function Navbar() {
             <CartIcon className={"w-6 h-6 stroke-[#c5c5c5]"} />
             <span
               className={`px-[3px] absolute right-0 top-0 h-fit rounded-full ${
-                totalItems > 0 ? "bg-[#ea3839] text-white text-xs" : "hidden"
+                totalUniqueItems > 0
+                  ? "bg-blue-800 text-white text-xs"
+                  : "hidden"
               }`}
             >
-              {totalItems}
+              {totalUniqueItems}
             </span>
           </div>
         </NavLink>
