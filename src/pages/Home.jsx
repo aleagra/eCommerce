@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { BRAND_FILTERS, ContainerCards, FilterButtons } from "../components";
+import {
+  BRAND_FILTERS,
+  ContainerCards,
+  FilterButtons,
+  Navbar,
+} from "../components";
 
 function App() {
   const [activeBrandFilter, setActiveBrandFilter] = useState(BRAND_FILTERS.ALL);
@@ -10,6 +15,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div className="grid grid-cols-[400px,1fr,] w-full">
         <div className="col-start-2 w-full">
           <div className="flex flex-col gap-8 px-12 mt-10">

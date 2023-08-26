@@ -15,7 +15,7 @@ const Cards = ({ img, title, price, id, description, item }) => {
       key={id}
       className="flex flex-col items-center rounded-lg shadow-md border border-[#e5e5e5]"
     >
-      <a href={"/details/" + id}>
+      <a href={"/" + id}>
         <div className="relative">
           <img src={img} alt="" />
           <HeartIcon

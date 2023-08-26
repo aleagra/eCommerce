@@ -50,7 +50,7 @@ export default function Login() {
   return (
     <>
       <div>
-        <section className="w-full flex flex-col justify-center gap-[1rem] items-center">
+        <section className="w-full h-screen flex flex-col justify-center gap-[1rem] items-center">
           <form
             onSubmit={(event) => handleSubmit(event)}
             className="flex flex-col gap-[2rem] rounded-lg p-[2rem]"

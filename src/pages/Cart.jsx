@@ -1,5 +1,6 @@
 import { useCart } from "react-use-cart";
 import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
+import { Navbar } from "../components";
 function Cart() {
   const {
     items,
@@ -7,16 +8,18 @@ function Cart() {
     totalUniqueItems,
     updateItemQuantity,
     removeItem,
+    cartTotal,
   } = useCart();
 
   const cart = () => (
     <>
+      <Navbar />
       <div className="my-4 text-center">
         <span className="text-2xl font-bold">
           {!totalUniqueItems} MI COMPRA ({totalItems})
         </span>
       </div>
-      <section className="flex flex-col gap-10">
+      <section className="flex flex-col gap-10 my-10">
         {items.map((item) => {
           return (
             <>
@@ -67,6 +70,15 @@ function Cart() {
             </>
           );
         })}
+        <div className="w-full flex items-center gap-4 flex-col">
+          <span className="text-2xl font-bold">Total: ${cartTotal}</span>
+          <button className="text-xl p-3 px-6 rounded-3xl text-white bg-black">
+            Realizar compra
+          </button>
+          <p>
+            Las promociones y costo de envío lo verás aplicado en el checkout
+          </p>
+        </div>
       </section>
     </>
   );
