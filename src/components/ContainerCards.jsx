@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Cards from "./Cards";
-import { BRAND_FILTERS, items } from "./const";
+import { BRAND_FILTERS, items } from "../utils/data";
 import { ProductContext } from "../context/Products";
 
 const ContainerCards = ({ activeBrandFilter }) => {
@@ -11,7 +11,7 @@ const ContainerCards = ({ activeBrandFilter }) => {
       : items.filter((item) => item.brand === activeBrandFilter);
 
   return (
-    <div className="gap-12 grid grid-cols-5">
+    <div className="gap-x-5 gap-y-8 grid grid-cols-5">
       {filteredItems.map((item) => (
         <Cards
           item={item}

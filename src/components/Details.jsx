@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../context/Products";
-import { items } from "./const";
+import { items } from "../utils/data";
 
 const Details = () => {
   const { id } = useParams();

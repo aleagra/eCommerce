@@ -4,8 +4,7 @@ import { useCart } from "react-use-cart";
 function Navbar() {
   var { totalUniqueItems } = useCart();
   return (
-    <nav className="w-full items-center flex justify-between px-12 py-5 border-b-2 border-[#e5e5e5]">
-      <h1>ecommerce</h1>
+    <nav className="w-full items-center flex justify-between px-12 py-5 h-[80px] border-b-2 border-[#e5e5e5]">
       <ul className="flex gap-12 text-[#9c9c9c] text-xl">
         <NavLink to={"/"} activeclassname={"active"}>
           Home

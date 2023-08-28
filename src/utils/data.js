@@ -8,6 +8,7 @@ export const BRAND_FILTERS = {
   CONVERSE: "Converse",
   NEWBALANCE: "New Balance",
 };
+
 export const items = [
   {
     id: 1,
