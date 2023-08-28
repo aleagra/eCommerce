@@ -1,7 +1,7 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import Cards from "./Cards";
 import { BRAND_FILTERS, items } from "./const";
-import { ProductContext } from "../context/Products";
+// import { ProductContext } from "../context/Products";
 
 const ContainerCards = ({ activeBrandFilter }) => {
   // const { products } = useContext(ProductContext);

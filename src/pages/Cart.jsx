@@ -1,45 +1,50 @@
 import { useCart } from "react-use-cart";
-import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
-import { Navbar } from "../components";
+import { MinusIcon, PlusIcon } from "../icons";
+
 function Cart() {
   const {
     items,
     totalItems,
     totalUniqueItems,
     updateItemQuantity,
-    removeItem,
+    // removeItem,
     cartTotal,
   } = useCart();
 
+  const empy = () => (
+    <div className="flex w-full h-full items-center justify-center">
+      <h1 className="text-2xl font-semibold">El carrito esta vacio</h1>
+    </div>
+  );
+
   const cart = () => (
     <>
-      <Navbar />
-      <div className="my-4 text-center">
-        <span className="text-2xl font-bold">
+      <div className="py-4 text-center bg-[#f6f6f6]">
+        <span className="text-xl">
           {!totalUniqueItems} MI COMPRA ({totalItems})
         </span>
       </div>
-      <section className="flex flex-col gap-10 my-10">
+      <section className="flex flex-col h-full gap-6 overflow-y-scroll mb-10 bg-[#f6f6f6]">
         {items.map((item) => {
           return (
             <>
               <section
-                className="flex bg-[#f6f6f6] gap-10 items-center"
+                className="flex bg-[#f6f6f6] justify-center gap-8 px-4 border-b border-black/30 items-center"
                 key={item.id}
               >
                 <div className="w-[200px]">
                   <img src={item.img} alt="" className="" />
                 </div>
 
-                <div className="flex flex-col justify-center gap-3 px-10 relative">
-                  <button
-                    className="absolute right-0"
+                <div className="flex flex-col gap-3 relative">
+                  {/* <button
+                    className="absolute right-0 top-1"
                     onClick={() => removeItem(item.id)}
                   >
                     <CloseIcon />
-                  </button>
-                  <p className="text-xl font-bold">{item.title}</p>
-                  <p className="text-xl ">{item.description}</p>
+                  </button> */}
+                  <p className="text-lg font-bold">{item.title}</p>
+                  <p className="text-base ">{item.description}</p>
 
                   <div className="flex gap-5">
                     <button
@@ -62,7 +67,7 @@ function Cart() {
                     </button>
 
                     <span className="font-bold">
-                      ${item.price * item.quantity}
+                      ${Math.round(item.price * item.quantity)}
                     </span>
                   </div>
                 </div>
@@ -70,18 +75,21 @@ function Cart() {
             </>
           );
         })}
-        <div className="w-full flex items-center gap-4 flex-col">
-          <span className="text-2xl font-bold">Total: ${cartTotal}</span>
-          <button className="text-xl p-3 px-6 rounded-3xl text-white bg-black">
+        <div className="w-full flex items-center py-4 gap-4 px-6 flex-col mt-auto">
+          <div className="w-full text-xl flex justify-between ">
+            <span>Total</span>
+            <span className=" font-bold">${cartTotal.toFixed(1)}</span>
+          </div>
+          <button className="text-xl w-full py-3 rounded-lg text-white bg-black">
             Realizar compra
           </button>
-          <p>
+          <p className="px-16 text-sm text-center">
             Las promociones y costo de envío lo verás aplicado en el checkout
           </p>
         </div>
       </section>
     </>
   );
-  return <>{cart()}</>;
+  return <>{cartTotal <= 0 ? empy() : cart()}</>;
 }
 export default Cart;
