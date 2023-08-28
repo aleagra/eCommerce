@@ -5,6 +5,7 @@ function Navbar() {
   var { totalUniqueItems } = useCart();
   return (
     <nav className="w-full items-center flex justify-between px-12 py-5 border-b-2 border-[#e5e5e5]">
+      <h1>ecommerce</h1>
       <ul className="flex gap-12 text-[#9c9c9c] text-xl">
         <NavLink to={"/"} activeclassname={"active"}>
           Home
