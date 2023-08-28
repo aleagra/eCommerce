@@ -12,7 +12,7 @@ const Cards = ({ img, title, price, id, description, item }) => {
         setAddedToCart(true)
     }
     return (
-        <div key={id} className="flex flex-col items-center rounded-lg shadow-md border border-[#e5e5e5] z-[999] relative w-full h-fit">
+        <div key={id} className="flex flex-col items-center rounded-lg shadow-md border border-[#e5e5e5] relative w-full h-fit">
             <Link className="relative w-full h-full" to={'/' + id} >
                 <img src={img} alt="" className='object-contain'/>
                 <HeartIcon className={'w-6 h-6 absolute top-6 right-6 transition-colors duration-500 cursor-pointer'} />

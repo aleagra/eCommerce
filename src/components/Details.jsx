@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 // import { useContext } from "react";
 // import { ProductContext } from "../context/Products";
-import { items } from "../utils/data";
+import { items, acordeonItems } from "../utils/data";
 import { useCart } from "react-use-cart";
-import { NavBar } from '../components/'
-
+import { Navbar, Acordeon } from '../components/'
 
 const Details = () => {
   const { addItem } = useCart();
@@ -17,7 +16,7 @@ const Details = () => {
 
   return (
     <>
-      <NavBar />
+      <Navbar />
       <div className="grid grid-cols-[1fr_300px] gap-16 mt-10 px-28">
         <div className="flex gap-6 col-start-1 justify-center">
           <img
