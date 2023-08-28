@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-[250px,1fr,] w-full">
+      <div className="grid grid-cols-[250px,1fr] w-full">
         <div className="col-start-1 w-full">
           <Filters />
         </div>
