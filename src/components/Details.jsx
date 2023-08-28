@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 // import { useContext } from "react";
 // import { ProductContext } from "../context/Products";
-import { acordeonItems, items } from "./const";
-import Navbar from "./Navbar";
-import Acordeon from "./Acordeon";
+import { items, acordeonItems } from "../utils/data";
 import { useCart } from "react-use-cart";
+import { Navbar, Acordeon } from '../components/'
 
 const Details = () => {
   const { addItem } = useCart();

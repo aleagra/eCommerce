@@ -1,4 +1,4 @@
-import { BRAND_FILTERS } from "./const";
+import { BRAND_FILTERS } from "../utils/data";
 
 const FilterButtons = ({ activeFilter, onChangeFilter }) => {
   return (
