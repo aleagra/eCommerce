@@ -1,17 +1,17 @@
 import { useContext } from "react";
 import Cards from "./Cards";
-import { BRAND_FILTERS } from "./const";
+import { BRAND_FILTERS, items } from "./const";
 import { ProductContext } from "../context/Products";
 
 const ContainerCards = ({ activeBrandFilter }) => {
-  const { products } = useContext(ProductContext);
+  // const { products } = useContext(ProductContext);
   const filteredItems =
     activeBrandFilter === BRAND_FILTERS.ALL
-      ? products
-      : products.filter((item) => item.brand === activeBrandFilter);
+      ? items
+      : items.filter((item) => item.brand === activeBrandFilter);
 
   return (
-    <div className="gap-12 grid grid-cols-4">
+    <div className="gap-12 grid grid-cols-5">
       {filteredItems.map((item) => (
         <Cards
           item={item}

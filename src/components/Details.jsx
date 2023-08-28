@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../context/Products";
+import { items } from "./const";
 
 const Details = () => {
   const { id } = useParams();
-  const { products } = useContext(ProductContext);
-  const item = products.find((item) => item.id === id);
+  // const { products } = useContext(ProductContext);
+  const item = items.find((item) => item.id === parseInt(id));
 
+  console.log(item);
   if (!item) {
     return <p>Producto no encontrado</p>;
   }
