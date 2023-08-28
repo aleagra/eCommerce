@@ -65,14 +65,13 @@ function Navbar() {
         </div>
       </nav>
       {isModalOpen && (
-        <div className="fixed top-0 right-0 w-full z-[999] h-full flex  items-center bg-black bg-opacity-50">
-          {/* Fondo oscuro con evento onClick para cerrar el modal */}
+        <div className="fixed top-0 right-0 w-full z-[999] h-full flex  items-center bg-black bg-opacity-60">
           <div
             className="absolute top-0 left-0 w-full h-full"
             onClick={closeModal}
           ></div>
 
-          <div className="bg-white w-[500px] flex flex-col h-full absolute right-0">
+          <div className="bg-white w-[470px] flex flex-col h-full absolute right-0">
             <button
               onClick={closeModal}
               className="absolute top-5 right-3 text-gray-600"

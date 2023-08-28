@@ -1,5 +1,6 @@
 import { useCart } from "react-use-cart";
-import { MinusIcon, PlusIcon } from "../icons";
+import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
+import { NavLink } from "react-router-dom";
 
 function Cart() {
   const {
@@ -7,7 +8,7 @@ function Cart() {
     totalItems,
     totalUniqueItems,
     updateItemQuantity,
-    // removeItem,
+    removeItem,
     cartTotal,
   } = useCart();
 
@@ -29,21 +30,25 @@ function Cart() {
           return (
             <>
               <section
-                className="flex bg-[#f6f6f6] justify-center gap-8 px-4 border-b border-black/30 items-center"
+                className="flex bg-[#f6f6f6] justify-center gap-8 px-4 relative border-b border-black/30 items-center"
                 key={item.id}
               >
+                <button
+                  className="absolute left-8 top-10"
+                  onClick={() => removeItem(item.id)}
+                >
+                  <CloseIcon />
+                </button>
+
                 <div className="w-[200px]">
                   <img src={item.img} alt="" className="" />
                 </div>
 
                 <div className="flex flex-col gap-3 relative">
-                  {/* <button
-                    className="absolute right-0 top-1"
-                    onClick={() => removeItem(item.id)}
-                  >
-                    <CloseIcon />
-                  </button> */}
-                  <p className="text-lg font-bold">{item.title}</p>
+                  <NavLink to={"/" + item.id}>
+                    <p className="text-lg font-bold">{item.title}</p>
+                  </NavLink>
+
                   <p className="text-base ">{item.description}</p>
 
                   <div className="flex gap-5">
@@ -61,7 +66,7 @@ function Cart() {
                       onClick={() =>
                         updateItemQuantity(item.id, item.quantity + 1)
                       }
-                      className="shop-button"
+                      className=""
                     >
                       <PlusIcon />
                     </button>
@@ -78,7 +83,7 @@ function Cart() {
         <div className="w-full flex items-center py-4 gap-4 px-6 flex-col mt-auto">
           <div className="w-full text-xl flex justify-between ">
             <span>Total</span>
-            <span className=" font-bold">${cartTotal.toFixed(1)}</span>
+            <span className=" font-bold">${cartTotal}</span>
           </div>
           <button className="text-xl w-full py-3 rounded-lg text-white bg-black">
             Realizar compra
