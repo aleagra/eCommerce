@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 // import { ProductContext } from "../context/Products";
 import { items, acordeonItems } from "../utils/data";
 import { useCart } from "react-use-cart";
-import { Navbar, Acordeon } from '../components/'
+import { Navbar, Acordeon } from "../components/";
 
 const Details = () => {
   const { addItem } = useCart();
@@ -21,12 +21,12 @@ const Details = () => {
         <div className="flex gap-6 col-start-1 justify-center">
           <img
             src={item.img}
-            className="w-[50%] object-contain"
+            className="w-[50%] h-[600px] object-contain bg-[#f6f6f6]"
             alt={item.title}
           />
           <img
             src={item.detail}
-            className="w-[50%] object-contain"
+            className="w-[50%] h-[600px] object-contain bg-[#f6f6f6]"
             alt={item.title}
           />
         </div>
