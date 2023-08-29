@@ -107,6 +107,7 @@ export const items = [
     description: "Zapatillas Adidas unisex",
     price: "123000",
     brand: BRAND_FILTERS.ADIDAS,
+    popular: "popular",
     detail: "12.1.png",
   },
   {

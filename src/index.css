@@ -5,8 +5,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 body {
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
   @apply bg-[#fcfcfc] overflow-x-hidden;
 }
 .active {
-  @apply text-blue-800 font-medium stroke-blue-800 transition-colors duration-500;
+  @apply text-[#476dea] font-medium stroke-[#476dea] transition-colors duration-500;
 }
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #476dea; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #476dea; /* creates padding around scroll thumb */
+}
+
+/* input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+input:checked {
+  background-color: #292d32;
+  border-color: #292d32;
+} */

@@ -14,7 +14,7 @@ const Cards = ({ img, title, price, id, description, item }) => {
   return (
     <div
       key={id}
-      className="flex flex-col items-center rounded-lg shadow-md border border-[#e5e5e5] relative w-full h-fit"
+      className="flex flex-col items-center rounded-lg shadow-sm border border-[#e5e5e5] relative w-full h-fit"
     >
       <Link className="relative w-full h-full" to={"/" + id}>
         <img

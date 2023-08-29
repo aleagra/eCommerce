@@ -10,11 +10,13 @@ function Navbar() {
   const openModal = () => {
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = "9px";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     document.body.style.overflowY = "visible";
+    document.body.style.paddingRight = "0px";
   };
   return (
     <>
@@ -62,6 +64,7 @@ function Navbar() {
           </NavLink>
         </div>
       </nav>
+
       {isModalOpen && (
         <div
           className={`fixed top-0  
