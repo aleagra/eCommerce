@@ -25,7 +25,7 @@ function Cart() {
           {!totalUniqueItems} MI COMPRA ({totalItems})
         </span>
       </div>
-      <section className="flex flex-col h-full gap-6 overflow-y-scroll mb-10 bg-[#f6f6f6]">
+      <section className="flex flex-col h-full gap-6 overflow-y-scroll custom-scrollbar  mb-10 bg-[#f6f6f6]">
         {items.map((item) => {
           return (
             <>
@@ -34,7 +34,7 @@ function Cart() {
                 key={item.id}
               >
                 <button
-                  className="absolute left-8 top-10"
+                  className="absolute left-8 top-3"
                   onClick={() => removeItem(item.id)}
                 >
                   <CloseIcon />
@@ -51,7 +51,7 @@ function Cart() {
 
                   <p className="text-base ">{item.description}</p>
 
-                  <div className="flex gap-5">
+                  <div className="flex gap-5 w-[230px]">
                     <button
                       className=""
                       onClick={() =>
@@ -71,7 +71,7 @@ function Cart() {
                       <PlusIcon />
                     </button>
 
-                    <span className="font-bold">
+                    <span className="font-bold w-[100px] text-center">
                       ${Math.round(item.price * item.quantity)}
                     </span>
                   </div>
@@ -85,7 +85,7 @@ function Cart() {
             <span>Total</span>
             <span className=" font-bold">${cartTotal}</span>
           </div>
-          <button className="text-xl w-full py-3 rounded-lg text-white bg-black">
+          <button className="text-xl w-full py-3 rounded-lg text-white bg-[#476dea]">
             Realizar compra
           </button>
           <p className="px-16 text-sm text-center">

@@ -4,7 +4,7 @@ function Filters() {
       <h1 className="text-2xl w-full text-center py-5 h-[80px] bg-[#476dea] text-white">
         E-COMMERCE
       </h1>
-      {/* <div className="grid grid-rows-[230px_230px_230px_1fr] h-full mt-12">
+      <div className="grid grid-rows-[230px_230px_230px_1fr] h-full mt-12">
         <div className="flex flex-col gap-4 pl-16 pr-12">
           <h1 className="text-lg font-medium">Category</h1>
           <ul className="flex flex-col w-full gap-2 text-sm">
@@ -68,7 +68,7 @@ function Filters() {
             </li>
           </ul>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
