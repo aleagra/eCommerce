@@ -6,7 +6,7 @@
 body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-  @apply bg-[#fcfcfc] overflow-x-hidden;
+  @apply bg-[#f8f7f5] overflow-x-hidden;
 }
 .active {
   @apply text-[#476dea] font-medium stroke-[#476dea] transition-colors duration-500;
@@ -45,7 +45,7 @@ input:checked {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f6f6f6;
+  background: transparent;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {

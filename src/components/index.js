@@ -1,8 +1,10 @@
 export { default as Acordeon } from './Acordeon';
 export { default as AcordeonItems } from './AcordeonItems';
 export { default as Cards } from './Cards';
+export { default as Checkout } from './Checkout';
 export { default as ContainerCards } from './ContainerCards';
 export { default as Details } from './Details';
 export { default as FilterButtons } from './FilterButtons';
 export { default as Filters } from './Filters';
 export { default as Navbar } from './Navbar';
+export * from './index';
