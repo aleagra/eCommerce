@@ -6,7 +6,7 @@
 body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-  @apply bg-[#f8f7f5] overflow-x-hidden;
+  @apply bg-white overflow-x-hidden;
 }
 .active {
   @apply text-[#476dea] font-medium stroke-[#476dea] transition-colors duration-500;

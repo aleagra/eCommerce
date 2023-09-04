@@ -3,7 +3,7 @@ import { ArrowIcon } from "../icons";
 const AcordeonItem = ({ title, content, isActive, onClick }) => (
   <div className="">
     <button
-      className={`w-full flex justify-between items-center font-semibold py-4 border-b border-black/20 focus:outline-none ${
+      className={`w-full flex justify-between items-center text-xl font-semibold py-4 border-b border-black/20 focus:outline-none ${
         isActive ? "" : ""
       }`}
       onClick={onClick}

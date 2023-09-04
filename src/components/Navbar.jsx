@@ -20,9 +20,9 @@ function Navbar() {
   };
   return (
     <>
-      <section className="bg-white border-b-2 border-[#e5e5e5]">
+      <section className=" border-b-2 border-[#e5e5e5]">
         <nav className="w-[1440px] mx-auto items-center flex justify-between py-5 h-[80px]">
-          <ul className="flex gap-12 text-[#9c9c9c] text-xl">
+          <ul className="flex gap-12 text-black text-xl">
             <NavLink to={"/"} activeclassname={"active"}>
               Home
             </NavLink>

@@ -25,7 +25,7 @@ function Cart() {
           {!totalUniqueItems} MI COMPRA ({totalItems})
         </span>
       </div>
-      <section className="flex flex-col h-full gap-6 overflow-y-scroll custom-scrollbar  mb-10 bg-[#f6f6f6]">
+      <section className="flex flex-col gap-6 overflow-y-scroll custom-scrollbar h-[560px] mb-10 bg-[#f6f6f6]">
         {items.map((item) => {
           return (
             <>
@@ -80,19 +80,19 @@ function Cart() {
             </>
           );
         })}
-        <div className="w-full flex items-center py-4 gap-4 px-6 flex-col mt-auto">
-          <div className="w-full text-xl flex justify-between ">
-            <span>Total</span>
-            <span className=" font-bold">${cartTotal}</span>
-          </div>
-          <button className="text-xl w-full py-3 rounded-lg text-white bg-[#476dea]">
-            Realizar compra
-          </button>
-          <p className="px-16 text-sm text-center">
-            Las promociones y costo de envío lo verás aplicado en el checkout
-          </p>
-        </div>
       </section>
+      <div className="w-full flex items-center py-4 gap-4 px-6 flex-col mt-auto mb-8">
+        <div className="w-full text-xl flex justify-between ">
+          <span>Total</span>
+          <span className=" font-bold">${cartTotal}</span>
+        </div>
+        <button className="text-xl w-full py-3 rounded-lg text-white bg-[#476dea]">
+          Realizar compra
+        </button>
+        <p className="px-16 text-sm text-center">
+          Las promociones y costo de envío lo verás aplicado en el checkout
+        </p>
+      </div>
     </>
   );
   return <>{cartTotal <= 0 ? empy() : cart()}</>;

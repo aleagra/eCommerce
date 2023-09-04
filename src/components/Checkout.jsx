@@ -1,17 +1,9 @@
 import { useCart } from "react-use-cart";
-import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 
 function Checkout() {
-  const {
-    items,
-    totalItems,
-    totalUniqueItems,
-    updateItemQuantity,
-    removeItem,
-    cartTotal,
-  } = useCart();
+  const { items, cartTotal } = useCart();
   return (
     <>
       <div className="grid-rows-[80px-1fr] h-screen">
