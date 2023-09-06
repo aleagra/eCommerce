@@ -43,7 +43,7 @@ const Details = () => {
               {Array.from({ length: 15 }, (_, index) => (
                 <button
                   key={index}
-                  className="border border-[#e5e5e5] rounded-lg"
+                  className="border border-[#e5e5e5] rounded-md focus:bg-[#201c27] focus:text-white transition-all duration-500"
                 >
                   {Number.isInteger((index + 8) / 2)
                     ? (index + 8) / 2
@@ -52,7 +52,7 @@ const Details = () => {
               ))}
             </div>
             <button
-              className="w-full bg-black rounded-lg mt-6 text-white py-3"
+              className="w-full bg-[#201c27] rounded-lg mt-6 text-white py-3"
               onClick={() => {
                 addItem(item);
               }}

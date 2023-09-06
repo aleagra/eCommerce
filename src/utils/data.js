@@ -265,7 +265,7 @@ export const items = [
   },
   {
     id: 30,
-    title: "Fresh Foam More Trail v3",
+    title: "Fresh Foam More Trail",
     img: "30.png",
     description: "Zapatillas New Balance para hombre",
     price: "120000",

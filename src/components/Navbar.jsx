@@ -48,7 +48,7 @@ function Navbar() {
               <span
                 className={`px-[3px] absolute right-0 top-0 h-fit rounded-full ${
                   totalUniqueItems > 0
-                    ? "bg-blue-800 text-white text-xs"
+                    ? "bg-[#201c27] text-white text-xs"
                     : "hidden"
                 }`}
               >

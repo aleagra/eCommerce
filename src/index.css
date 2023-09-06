@@ -9,7 +9,7 @@ body {
   @apply bg-white overflow-x-hidden;
 }
 .active {
-  @apply text-[#476dea] font-medium stroke-[#476dea] transition-colors duration-500;
+  @apply text-[#201c27] font-bold stroke-[#201c27] transition-colors duration-500;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -21,25 +21,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #476dea;
+  background-color: #201c27;
   border-radius: 20px;
-  border: 3px solid #476dea;
+  border: 3px solid #201c27;
 }
 
-/* input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: white;
-  cursor: pointer;
-}
-input:checked {
-  background-color: #292d32;
-  border-color: #292d32;
-} */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -49,7 +35,7 @@ input:checked {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #476dea;
+  background-color: #201c27;
   border-radius: 20px;
-  border: 3px solid #476dea;
+  border: 3px solid #201c27;
 }

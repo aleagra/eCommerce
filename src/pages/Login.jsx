@@ -72,7 +72,7 @@ export default function Login() {
             />
             <button
               type="submit"
-              className="bg-blue-900 py-3 my-3 font-bold cursor-pointer rounded-lg text-lg text-white uppercase"
+              className="bg-[#201c27] py-3 my-3 font-bold cursor-pointer rounded-lg text-lg text-white uppercase"
             >
               Iniciar sesión
             </button>

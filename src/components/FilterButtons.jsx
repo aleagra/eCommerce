@@ -11,7 +11,7 @@ const FilterButtons = ({ activeFilter, onChangeFilter }) => {
               onClick={() => onChangeFilter(filter)}
               className={`py-2 px-6 rounded-md border border-[#e5e5e5] ${
                 activeFilter === filter
-                  ? " bg-[#3b6eec] text-white transition-colors duration-700"
+                  ? " bg-[#201c27] text-white transition-colors duration-700"
                   : ""
               }`}
             >
@@ -24,7 +24,7 @@ const FilterButtons = ({ activeFilter, onChangeFilter }) => {
             onClick={() => onChangeFilter("popular")}
             className={`py-2 px-6 rounded-md border border-[#e5e5e5] ${
               activeFilter === "popular"
-                ? " bg-[#3b6eec] text-white transition-colors duration-700"
+                ? " bg-[#201c27] text-white transition-colors duration-700"
                 : ""
             }`}
           >

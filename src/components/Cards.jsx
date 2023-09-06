@@ -20,7 +20,7 @@ const Cards = ({ img, title, price, id, description, item }) => {
         <img
           src={img}
           alt=""
-          className="object-cover w-full h-[300px] m-auto bg-[#f6f6f6]"
+          className="object-contain w-full h-[300px] m-auto bg-[#f6f6f6]"
         />
         <HeartIcon
           className={
@@ -41,7 +41,7 @@ const Cards = ({ img, title, price, id, description, item }) => {
             </span>
           ) : (
             <span
-              className="p-2 bg-blue-600 border border-[#e5e5e5] rounded-lg cursor-pointer"
+              className="p-2 bg-[#201c27] border border-[#e5e5e5] rounded-lg cursor-pointer"
               onClick={handleAddToCart}
             >
               <CartIcon className={"w-5 h-5 stroke-white"} />

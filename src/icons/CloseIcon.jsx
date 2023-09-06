@@ -5,7 +5,7 @@ function CloseIcon() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="#476dea"
+      stroke="#201c27"
       className="w-6 h-6"
     >
       <path

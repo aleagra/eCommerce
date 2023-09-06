@@ -1,7 +1,7 @@
 function Filters() {
   return (
     <div className="h-full border-r top-0 w-[250px] fixed bg-white">
-      <h1 className="text-2xl w-full text-center py-5 h-[80px] bg-[#476dea] text-white">
+      <h1 className="text-2xl w-full text-center py-5 h-[80px] bg-[#201c27] text-white">
         E-COMMERCE
       </h1>
       <div className="grid grid-rows-[230px_230px_230px_1fr] h-full mt-12">

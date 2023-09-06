@@ -20,17 +20,17 @@ function Cart() {
 
   const cart = () => (
     <>
-      <div className="py-4 text-center bg-[#f6f6f6]">
+      <div className="py-4 text-center">
         <span className="text-xl">
           {!totalUniqueItems} MI COMPRA ({totalItems})
         </span>
       </div>
-      <section className="flex flex-col gap-6 overflow-y-scroll custom-scrollbar h-[560px] mb-10 bg-[#f6f6f6]">
+      <section className="flex flex-col gap-6 overflow-y-scroll custom-scrollbar h-[560px] mb-10">
         {items.map((item) => {
           return (
             <>
               <section
-                className="flex bg-[#f6f6f6] justify-center gap-8 px-4 relative border-b border-black/30 items-center"
+                className="flex justify-center gap-8 px-4 relative border-b border-black/30 items-center"
                 key={item.id}
               >
                 <button
@@ -82,13 +82,18 @@ function Cart() {
         })}
       </section>
       <div className="w-full flex items-center py-4 gap-4 px-6 flex-col mt-auto mb-8">
-        <div className="w-full text-xl flex justify-between ">
+        <div className="w-full text-2xl flex justify-between ">
           <span>Total</span>
           <span className=" font-bold">${cartTotal}</span>
         </div>
-        <button className="text-xl w-full py-3 rounded-lg text-white bg-[#476dea]">
-          Realizar compra
-        </button>
+        <NavLink
+          to={"/checkout"}
+          className={
+            "w-full py-3 bg-[#201c27] text-xl mx-auto text-center rounded-lg"
+          }
+        >
+          <button className=" text-white ">Realizar compra</button>
+        </NavLink>
         <p className="px-16 text-sm text-center">
           Las promociones y costo de envío lo verás aplicado en el checkout
         </p>
