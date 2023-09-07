@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { CartIcon, CloseIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import Cart from "../pages/Cart";
 function Navbar() {
+  const navigate = useNavigate();
   var { totalUniqueItems } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,6 +18,9 @@ function Navbar() {
     setIsModalOpen(false);
     document.body.style.overflowY = "visible";
     document.body.style.paddingRight = "0px";
+  };
+  const closeModalPage = () => {
+    navigate("/checkout");
   };
   return (
     <>
@@ -89,8 +93,7 @@ function Navbar() {
         >
           <CloseIcon />
         </button>
-        {Cart()}
-        <div className="relative"></div>
+        <Cart closeModalPage={closeModalPage} />
       </div>
     </>
   );

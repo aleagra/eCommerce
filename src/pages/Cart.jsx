@@ -2,7 +2,7 @@ import { useCart } from "react-use-cart";
 import { CloseIcon, MinusIcon, PlusIcon } from "../icons";
 import { NavLink } from "react-router-dom";
 
-function Cart() {
+function Cart({ closeModalPage }) {
   const {
     items,
     totalItems,
@@ -87,7 +87,7 @@ function Cart() {
           <span className=" font-bold">${cartTotal}</span>
         </div>
         <NavLink
-          to={"/checkout"}
+          onClick={closeModalPage}
           className={
             "w-full py-3 bg-[#201c27] text-xl mx-auto text-center rounded-lg"
           }

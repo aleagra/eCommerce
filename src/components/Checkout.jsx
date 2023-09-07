@@ -6,25 +6,23 @@ function Checkout() {
   const { items, cartTotal } = useCart();
   return (
     <>
-      <div className="grid-rows-[80px-1fr] h-screen ">
-        <div className="row-start-1">
-          <Navbar />
-        </div>
-        <div className="w-[1440px] mx-auto grid grid-cols-[900px_1fr] gap-20">
-          <div className="w-full h-full col-start-1 my-10">
-            <h1 className="mb-4 text-xl font-bold text-[#201c27]">
+      <div className="grid-rows-[80px-1fr]  ">
+        <div className="w-[1440px] h-screen mx-auto grid grid-cols-[800px_1fr] gap-20">
+          <div className="w-full h-full col-start-1 py-10">
+            <h1 className="text-xl font-bold text-[#5e656c]">
               Personal information
             </h1>
-            <div className="w-full h-[350px] items-center grid grid-cols-2 grid-rows-3 gap-10 gap-y-6 bg-white shadow-md rounded-sm p-10">
+            <div className="w-full h-[350px] items-center grid grid-cols-2 grid-rows-3 gap-10 gap-y-6 bg-white rounded-sm py-6">
               <div className="flex flex-col">
-                <label htmlFor="input1" className="font-bold text-[#201c27]">
-                  Name
+                <label htmlFor="input1" className="font-bold text-[#5e656c]">
+                  Firt Name
                 </label>
                 <input
                   type="text"
                   id="input1"
                   name="input1"
-                  className="rounded-md border-2 border-black/10 p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
+                  placeholder="Type first name"
+                  className="rounded-md border-2 border-[#e5e8ee] p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
                 />
               </div>
               <div className="flex flex-col">
@@ -38,7 +36,8 @@ function Checkout() {
                   type="text"
                   id="input2"
                   name="input2"
-                  className="rounded-md border-2 border-black/10 p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
+                  placeholder="Type movile number"
+                  className="rounded-md border-2 border-[#e5e8ee] p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
                 />
               </div>
 
@@ -47,12 +46,13 @@ function Checkout() {
                   htmlFor="input3"
                   className="font-semibold text-[#201c27]"
                 >
-                  Email
+                  Email Address
                 </label>
                 <input
                   type="text"
                   id="input3"
                   name="input3"
+                  placeholder="Type Email Address"
                   className="rounded-md border-2 border-black/10 p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
                 />
               </div>
@@ -67,6 +67,7 @@ function Checkout() {
                   type="text"
                   id="input4"
                   name="input4"
+                  placeholder="Type city"
                   className="rounded-md border-2 border-black/10 p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
                 />
               </div>
@@ -82,6 +83,7 @@ function Checkout() {
                   type="text"
                   id="input5"
                   name="input5"
+                  placeholder="Choose"
                   className="rounded-md border-2 border-black/10 p-2 px-4 outline-none mt-1 focus:border-[#201c27]"
                 />
               </div>
@@ -101,8 +103,8 @@ function Checkout() {
               </div>
             </div>
           </div>
-          <div className="col-start-2 w-full my-10 grid grid-rows-[40px_1fr_260px] shadow-md">
-            <h1 className="mb-4 text-xl font-bold text-[#201c27]">
+          <div className="col-start-2 bg-[#fafafa] w-full py-10 grid grid-rows-[40px_1fr_260px]">
+            <h1 className="mb-4 text-center text-xl font-bold text-[#201c27]">
               Order Summary
             </h1>
             <div className="w-full h-[450px] overflow-y-scroll custom-scrollbar px-6">
