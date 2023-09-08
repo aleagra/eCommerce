@@ -91,15 +91,15 @@ export const items = [
   //   brand: BRAND_FILTERS.NIKE,
   //   detail: "9.1.png",
   // },
-  // {
-  //   id: 10,
-  //   title: "Nike Air Huarache",
-  //   img: "10.png",
-  //   description: "Zapatillas Nike para hombre",
-  //   price: "150000",
-  //   brand: BRAND_FILTERS.NIKE,
-  //   detail: "10.1.png",
-  // },
+  {
+    id: 11,
+    title: "FORUM LOW",
+    img: "41.png",
+    description: "Zapatillas Adidas unisex",
+    price: "86000",
+    brand: BRAND_FILTERS.ADIDAS,
+    detail: "41.1.png",
+  },   
   {
     id: 12,
     title: "YZY 350 V2 CMPCT",
@@ -361,7 +361,8 @@ export const items = [
     price: "80000",
     brand: BRAND_FILTERS.REEBOK,
     detail: "40.1.png",
-  },  
+  },
+  
 
 ];
 export const acordeonItems = [

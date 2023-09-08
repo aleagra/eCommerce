@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 // import { ProductContext } from "../context/Products";
 import { items, acordeonItems } from "../utils/data";
 import { useCart } from "react-use-cart";
-import { Navbar, Acordeon, Cards } from "../components/";
+import { Navbar, Acordeon, Cards, ImageModal } from "../components/";
+import { useState } from "react";
 
 const Details = () => {
   const { addItem } = useCart();
   const { id } = useParams();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   // const { products } = useContext(ProductContext);
   const item = items.find((item) => item.id === parseInt(id));
   if (!item) {
@@ -16,6 +19,16 @@ const Details = () => {
   const sameBrandShoes = items.filter(
     (shoe) => shoe.brand === item.brand && shoe.id !== item.id
   );
+
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -31,6 +44,7 @@ const Details = () => {
             src={item.detail}
             className="w-[50%]  object-contain bg-[#f6f6f6] shadow-sm"
             alt={item.title}
+            onClick={() => openModal(item.detail)}
           />
         </div>
         <div className="flex flex-col col-start-2 h-full w-fit pt-2 pl-20">
@@ -81,6 +95,9 @@ const Details = () => {
           ))}
         </div>
       </div>
+      {isModalOpen && (
+        <ImageModal imageUrl={selectedImage} onClose={closeModal} />
+      )}
     </>
   );
 };

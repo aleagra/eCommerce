@@ -1,6 +1,5 @@
 import { useCart } from "react-use-cart";
 import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
 
 function Checkout() {
   const { items, cartTotal } = useCart();
