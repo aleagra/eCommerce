@@ -6,7 +6,7 @@ function SearchIcon() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="#c5c5c5"
-      className="w-5 h-5 absolute left-4"
+      className="w-5 h-5 absolute left-4 top-3"
     >
       <path
         strokeLinecap="round"

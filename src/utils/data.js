@@ -12,7 +12,7 @@ export const BRAND_FILTERS = {
 export const items = [
   {
     id: 1,
-    title: "Air Force 1 Mid",
+    title: "Dunk Low Premium",
     img: "1.png",
     description: "Nike Men's Shoes",
     price: "90000",

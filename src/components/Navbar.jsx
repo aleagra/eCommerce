@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { CartIcon, CloseIcon, HeartIcon, SearchIcon, UserIcon } from "../icons";
+import { CartIcon, CloseIcon, HeartIcon, UserIcon } from "../icons";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import Cart from "../pages/Cart";
+import Search from "./ModalSearch";
+import ModalSearch from "./ModalSearch";
 function Navbar() {
   const navigate = useNavigate();
   var { totalUniqueItems } = useCart();
@@ -36,14 +38,7 @@ function Navbar() {
             <li>Kids</li>
           </ul>
           <div className="flex gap-6 h-fit items-center">
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                placeholder="Enter your search shoes..."
-                className="outline-none bg-[#f5f5f5] text-[#c5c5c5] shadow-sm rounded-lg py-3 pl-12 pr-14 text-sm"
-              />
-              <SearchIcon />
-            </div>
+            <ModalSearch />
             <NavLink>
               <HeartIcon className={"w-6 h-6"} />
             </NavLink>

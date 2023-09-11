@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "react-use-cart";
 import { useParams } from "react-router-dom";
 import { items, acordeonItems } from "../utils/data";
@@ -11,8 +11,10 @@ const Details = () => {
   const [selectSize, setSelectSize] = useState(null);
   const item = items.find((item) => item.id === parseInt(id));
 
-  // Inicializa selectedImage con item.img
   const [selectedImage, setSelectedImage] = useState(item.img);
+  useEffect(() => {
+    setSelectedImage(item.img);
+  }, [item.img]);
 
   if (!item) {
     return <p>Producto no encontrado</p>;
@@ -23,7 +25,7 @@ const Details = () => {
   );
 
   const closeModal = () => {
-    setSelectedImage(item.img); // Restablece la imagen a item.img al cerrar el modal
+    setSelectedImage(item.img);
     setIsModalOpen(false);
   };
 
@@ -44,34 +46,32 @@ const Details = () => {
     }
   };
 
+  const handleThumbnailHover = (newImage) => {
+    setSelectedImage(newImage);
+  };
+
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-[900px_300px] w-[1200px] mx-auto my-16">
+      <div className="grid grid-cols-[700px_300px] gap-[100px] w-[1024px]  mx-auto my-16">
         <div className="flex w-fit col-start-1 gap-8">
           <div className="grid grid-rows-3 gap-y-8 h-fit">
             <img
               src={item.img}
               alt=""
-              className="w-[100px] rounded-md bg-[#f6f6f6] hover:bg-black/20 transition-colors duration-200 object-contain"
-              onMouseEnter={() => setSelectedImage(item.img)}
+              className="w-[85px] p-2 rounded-md bg-[#f6f6f6] hover:bg-black/20 transition-colors duration-200 object-contain"
+              onMouseEnter={() => handleThumbnailHover(item.img)}
             />
             <img
               src={item.detail}
               alt=""
-              className="w-[100px] rounded-md bg-[#f6f6f6] hover:bg-black/20 transition-colors duration-200 object-contain"
-              onMouseEnter={() => setSelectedImage(item.detail)}
-            />
-            <img
-              src={item.img}
-              alt=""
-              className="w-[100px] rounded-md bg-[#f6f6f6] hover:bg-black/20 transition-colors duration-200 object-contain"
-              onMouseEnter={() => setSelectedImage(item.img)}
+              className="w-[85px] p-2 rounded-md bg-[#f6f6f6] hover:bg-black/20 transition-colors duration-200 object-contain"
+              onMouseEnter={() => handleThumbnailHover(item.detail)}
             />
           </div>
           <img
             src={selectedImage}
-            className="w-[65%] object-contain bg-[#f6f6f6] shadow-sm rounded-md"
+            className="w-[585px] h-[650px] object-contain bg-[#f6f6f6] shadow-sm rounded-md"
             alt={item.title}
           />
         </div>
