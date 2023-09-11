@@ -44,12 +44,12 @@ function Cart({ closeModalPage }) {
                   <img src={item.img} alt="" className="" />
                 </div>
 
-                <div className="flex flex-col gap-3 relative">
+                <div className="flex flex-col gap-1 relative">
                   <NavLink to={"/" + item.id}>
                     <p className="text-lg font-bold">{item.title}</p>
                   </NavLink>
-
-                  <p className="text-base ">{item.description}</p>
+                  <p className="text-base font-semibold">Talle {item.size}</p>
+                  <p className="text-base">{item.description}</p>
 
                   <div className="flex gap-5 w-[230px]">
                     <button

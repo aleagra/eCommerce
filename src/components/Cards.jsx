@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { useCart } from "react-use-cart";
-import { CartIcon, HeartIcon } from "../icons";
+// import { useState } from "react";
+// import { useCart } from "react-use-cart";
+import { HeartIcon } from "../icons";
 import { Link } from "react-router-dom";
 
-const Cards = ({ img, title, price, id, description, item }) => {
-  const { addItem } = useCart();
-  const [addedToCart, setAddedToCart] = useState(false);
+const Cards = ({ img, title, price, id, description }) => {
+  // const { addItem } = useCart();
+  // const [addedToCart, setAddedToCart] = useState(false);
 
-  const handleAddToCart = () => {
-    addItem(item);
-    setAddedToCart(true);
-  };
+  // const handleAddToCart = () => {
+  //   addItem(item);
+  //   setAddedToCart(true);
+  // };
   return (
     <div
       key={id}
-      className="flex flex-col items-center rounded-lg shadow-sm border border-[#e5e5e5] relative w-full h-fit"
+      className="flex flex-col items-center relative w-full h-fit border border-[#e9e9e9] rounded-md transition-all duration-500 hover:scale-105"
     >
       <Link className="relative w-full h-full" to={"/" + id}>
         <img
@@ -27,15 +27,13 @@ const Cards = ({ img, title, price, id, description, item }) => {
             "w-6 h-6 absolute top-6 right-6 transition-colors duration-500 cursor-pointer"
           }
         />
-      </Link>
-      <div className="w-full p-2 px-6">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <h2 className="text-lg text-black/40 font-semibold h-[50px]">
-          {description}
-        </h2>
-        <div className="flex justify-between items-center my-5">
-          <h3 className="text-xl font-semibold">${price}</h3>
-          {addedToCart ? (
+
+        <div className="w-full py-4 px-2">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <h2 className="text-base text-black/40 font-medium">{description}</h2>
+          <div className="flex justify-between items-center">
+            <h3 className="text-lg font-semibold mt-2">${price}</h3>
+            {/* {addedToCart ? (
             <span className="p-2 border border-[#e5e5e5] rounded-lg transition-colors duration-500">
               <CartIcon className={"w-5 h-5 stroke-[#e5e5e5]"} />
             </span>
@@ -46,9 +44,10 @@ const Cards = ({ img, title, price, id, description, item }) => {
             >
               <CartIcon className={"w-5 h-5 stroke-white"} />
             </span>
-          )}
+          )} */}
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

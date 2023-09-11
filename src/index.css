@@ -2,12 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-body {
-  font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
-  @apply bg-white overflow-x-hidden;
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.ttf");
 }
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+}
+
+body {
+  scroll-behavior: smooth;
+  @apply bg-white overflow-x-hidden font-inter;
+}
+
 .active {
   @apply text-[#201c27] font-bold stroke-[#201c27] transition-colors duration-500;
 }

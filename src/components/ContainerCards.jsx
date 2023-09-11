@@ -11,7 +11,7 @@ const ContainerCards = ({ activeBrandFilter }) => {
       : items.filter((item) => item.brand === activeBrandFilter);
 
   return (
-    <div className="gap-x-5 gap-y-8 grid grid-cols-5">
+    <div className="gap-x-6 gap-y-10 grid grid-cols-5 mt-6">
       {filteredItems.map((item) => (
         <Cards
           item={item}

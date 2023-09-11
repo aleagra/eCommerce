@@ -9,8 +9,8 @@ const ImageModal = ({ imageUrl, onClose }) => {
     },
     largeImage: {
       src: imageUrl,
-      width: 5000, // Ancho de la imagen ampliada
-      height:3000, // Alto de la imagen ampliada
+      width: 5000,
+      height:3000,
     },
    // Puedes ajustar la posición de la imagen ampliada
   };
